@@ -1,6 +1,7 @@
 # Agile
 Membres:
--Yassir AIT TMILLA
--Cillian ROSAY
--
--
+
+- Yassir AIT TMILLA
+- Cillian ROSAY
+- Benoit Gaillard
+- Alami Yassine
