@@ -94,6 +94,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "Tourneo:build:production",
+            "firebaseProject": "tourneo-ffcd9",
+            "firebaseHostingSite": "tourneo-ffcd9"
+          }
         }
       }
     }
