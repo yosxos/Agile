@@ -35,7 +35,12 @@
                   <div class="w-100 p-3">
                     <label class="form-label"> club</label>
                     <input type="text"  class="form-control" name="club" [(ngModel)]="user.mail" #ctlId="ngModel"
-                      required placeholder="Votre CLUB">
+                       placeholder="Votre CLUB">
+                  </div>
+                  <div class="w-100 p-3">
+                    <label class="form-label"> Statut</label>
+                    <input type="text"  class="form-control" name="statut" [(ngModel)]="user.mail" #ctlId="ngModel"
+                       placeholder="Statut">
                   </div>
                 <button class="w-100 btn btn-lg btn-primary" type="submit" value="Connextion"
                   [disabled]="f.invalid">Connexion</button>
