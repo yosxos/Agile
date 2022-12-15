@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { NgxBootstrapIconsModule } from 'ngx-bootstrap-icons';
+import { allIcons } from 'ngx-bootstrap-icons';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,6 +27,7 @@ import { InscriptionComponent } from './pages/inscription/inscription.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgxBootstrapIconsModule.pick(allIcons),
     FormsModule,
     HttpClientModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
