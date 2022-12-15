@@ -17,6 +17,9 @@ export class InscriptionComponent implements OnInit {
   ngOnInit(): void {
   }
   AddToFire(){
+    this.user.uid=this.auth.currentUser?.uid!
+    this.user.statut="utilisateur"
     this.uServ.createAccount(this.user)
+    this.uServ.addUser(this.user.uid,this.user)
   }
 }

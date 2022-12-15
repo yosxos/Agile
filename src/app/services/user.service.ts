@@ -36,7 +36,6 @@ export class UserService {
           }
 
         )
-        this.addUser(user.uid,user);
       }
     )
 

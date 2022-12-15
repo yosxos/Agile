@@ -41,7 +41,7 @@ describe('UserService', () => {
       mail:"test",
       tel:"test",
       club: "test",
-      status:"test",
+      statut:"test",
     }
     const result = service.createAccount(user);
     expect(result).toEqual(true);

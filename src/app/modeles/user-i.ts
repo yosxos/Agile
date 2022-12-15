@@ -6,7 +6,7 @@ export interface UserI {
     mail:string;
     tel:string;
     club?: string;
-    status:string;
+    statut:string;
 }
 
 export interface IdI {
