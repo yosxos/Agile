@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Auth, signInWithEmailAndPassword } from '@angular/fire/auth';
 import { Firestore } from '@angular/fire/firestore';
-import { IdI } from '../modeles/user-i';
+import { IdI, UserI } from '../modeles/user-i';
 
 @Injectable({
   providedIn: 'root'
@@ -20,5 +20,7 @@ export class UserService {
       })
       .catch(err => console.log(err));
   }
-
+  createAccount(user:UserI){
+    return true;
+  }
 }
