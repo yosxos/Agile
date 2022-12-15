@@ -1,7 +1,8 @@
 import { TestBed, tick } from '@angular/core/testing';
 import { FirebaseApp, FirebaseAppModule } from '@angular/fire/app';
-import { Auth } from '@angular/fire/auth';
+import { Auth, User } from '@angular/fire/auth';
 import { Firestore } from '@angular/fire/firestore';
+import { UserI } from '../modeles/user-i';
 import { UserService } from './user.service';
 
 describe('UserService', () => {
@@ -26,4 +27,20 @@ describe('UserService', () => {
      service.identification(email,mdp);
     expect(service.users.length).toBeGreaterThan(1);
   }
+  it('creates an account', () => {
+    let user:UserI={
+      uid: "xxxxx",
+      nom: "test",
+      mdp:"test",
+      avatar:"test",
+      mail:"test",
+      tel:"test",
+      club: "test",
+      status:"test",
+
+    }
+    const result = service.createAccount(user);
+
+    expect(result).toEqual(true);
+});
 });
