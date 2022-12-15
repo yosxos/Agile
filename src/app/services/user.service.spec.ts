@@ -13,4 +13,10 @@ describe('UserService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+  it('should authentificate'),()=>{
+    const email="pipo@pipo.org";
+    const mdp="pipopipo";
+    service.identification(email,mdp);
+    expect(service.users.Length).toBeGreaterThan(1);
+  }
 });
