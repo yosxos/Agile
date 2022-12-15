@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "tourneo-ffcd9": {
+      "hosting": {
+        "Tourneo": [
+          "tourneo-ffcd9"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "tourneo-ffcd9"
+  }
+}
