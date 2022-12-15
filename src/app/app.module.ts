@@ -20,7 +20,7 @@ import { InscriptionComponent } from './pages/inscription/inscription.component'
   declarations: [
     AppComponent,
     ConnexionComponent,
-    ProfilComponent
+    ProfilComponent,
     InscriptionComponent
 
   ],
