@@ -1,11 +1,9 @@
-
-    <div class="container h-100">
-      <div class="row h-100 align-items-center">
-        <h1 class="fw-light"><strong>Tourneo</strong> </h1>
-        <div class="col-12 text-center">
-          <section>
-            <h3>Connectez-vous </h3>
-
+<div class="container h-100">
+  <div class="row h-100 align-items-center">
+    <h1 class="fw-light"><strong>Tourneo</strong> </h1>
+    <div class="col-12 text-center">
+      <section>
+        <h3>Connectez-vous </h3>
             <form class="form-signin"  (submit)="checkFromFire()" #f="ngForm">
               <div class="w-100 p-3">
                 <label class="form-label"> Identifiant</label>
@@ -21,10 +19,11 @@
                 [disabled]="f.invalid">Connexion</button>
                 <div>
                 <a routerLink="inscription" class="w-100 btn btn-lg btn-primary">Inscription</a>
-</div>
+              </div>
             </form>
           </section>
-
         </div>
       </div>
     </div>
+  </div>
+</div>

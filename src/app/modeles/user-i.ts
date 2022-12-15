@@ -8,7 +8,6 @@ export interface UserI {
     club?: string;
     statut:string;
 }
-
 export interface IdI {
     mail: string;
     passe: string;
