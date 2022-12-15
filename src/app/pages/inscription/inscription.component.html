@@ -9,7 +9,7 @@
               <form class="form-signin"  (submit)="AddToFire()" #f="ngForm">
                 <div class="w-100 p-3">
                     <label class="form-label"> Nom</label>
-                    <input type="text"  class="form-control" name="nom" [(ngModel)]="user.mail" #ctlId="ngModel"
+                    <input type="text"  class="form-control" name="nom" [(ngModel)]="user.nom" #ctlId="ngModel"
                       required placeholder="Nom">
                   </div>
                 <div class="w-100 p-3">
@@ -24,18 +24,13 @@
                 </div>
                 <div class="w-100 p-3">
                     <label class="form-label"> Avatar</label>
-                    <input type="text"  class="form-control" name="Avatar" [(ngModel)]="user.mail" #ctlId="ngModel"
+                    <input type="text"  class="form-control" name="Avatar" [(ngModel)]="user.avatar" #ctlId="ngModel"
                       required placeholder="Lien de votre photo">
                   </div>
                   <div class="w-100 p-3">
                     <label class="form-label"> Telephone</label>
-                    <input type="text"  class="form-control" name="tel" [(ngModel)]="user.mail" #ctlId="ngModel"
+                    <input type="text"  class="form-control" name="tel" [(ngModel)]="user.tel" #ctlId="ngModel"
                       required placeholder="Telephone">
-                  </div>
-                  <div class="w-100 p-3">
-                    <label class="form-label"> club</label>
-                    <input type="text"  class="form-control" name="club" [(ngModel)]="user.mail" #ctlId="ngModel"
-                       placeholder="Votre CLUB">
                   </div>
                 <button class="w-100 btn btn-lg btn-primary" type="submit" value="Connextion"
                   [disabled]="f.invalid">Valider</button>

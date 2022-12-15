@@ -67,4 +67,16 @@ export class UserService {
     .catch(err => console.log(err))
   }
 
+  async saveUserProfil(){
+    console.log(this.auth.currentUser!.uid);
+    // Création d'un lien vers un document spécifique vers la bdd Firestore : la bdd, la collection, l'id du document
+    const docUser = doc(this.bdd, 'users', this.auth.currentUser!.uid);
+    //mettre a jour un utilisateur
+    await setDoc(docUser, this.profil, {merge:true})
+    // Modifier les données de l'utilisateur de firebase authentification
+    await updateProfile(this.auth.currentUser!, {displayName : this.profil.nom})
+    .then(r => console.log("Les données ont été mises à jour",this.profil))
+    .catch(err => console.log(err));
+  }
+
 }
