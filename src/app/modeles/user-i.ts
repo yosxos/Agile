@@ -1,5 +1,5 @@
 export interface UserI {
-    uid: string | number;
+    uid: string ;
     nom: string;
     mdp:string;
     avatar:string;
