@@ -28,13 +28,13 @@ export class UserService {
         console.log("Utilisateur connecté !", data);
 
         this.getFireProfil(this.auth.currentUser!.uid);
-        this.router.navigateByUrl('/profil');
+        this.router.navigateByUrl('/dashboard');
         this.users.push({ mail: email, passe: mdp })
         return true;
       })
       return false
   }
-  
+
   async addUser(code:string,user:UserI){
     const docUser= doc(this.bdd, 'users', code)
     await setDoc(docUser, user, { merge: true });
