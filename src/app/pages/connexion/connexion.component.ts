@@ -20,7 +20,6 @@ export class ConnexionComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
   /** Identification à l'aide de FireBase */
   checkFromFire(){
     this.user.identification(this.id.mail,this.id.passe);

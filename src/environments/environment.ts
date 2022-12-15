@@ -11,7 +11,8 @@ export const environment = {
     authDomain: 'tourneo-ffcd9.firebaseapp.com',
     messagingSenderId: '1036608560263',
   },
-  production: false
+  production: false,
+
 };
 
 /*

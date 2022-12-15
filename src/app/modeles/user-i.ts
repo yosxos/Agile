@@ -1,8 +1,12 @@
 export interface UserI {
-    uid: string | number;
+    uid: string ;
     nom: string;
-    prenoms: Array<string>;
-    statut?: string;
+    mdp:string;
+    avatar:string;
+    mail:string;
+    tel:string;
+    club?: string;
+    statut:string;
 }
 
 export interface IdI {
