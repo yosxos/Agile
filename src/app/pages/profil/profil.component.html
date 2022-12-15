@@ -9,7 +9,9 @@
                             style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
                             <img src="{{user.profil.avatar}}" ng-if="!!link" alt="Avatar" class="img-fluid my-5"
                                 style="width: 80px;" />
-                            <h5>{{user.profil.nom}}</h5>
+                            <h5 *ngIf="!modify">{{user.profil.nom}}</h5>
+                            <input type="text" *ngIf="modify" class="form-control" [(ngModel)]="user.profil.nom"
+                                placeholder="Nom">
                             <p>{{user.profil.club}}</p>
                             <i class="far fa-edit mb-5"></i>
                         </div>
@@ -24,13 +26,24 @@
                                     </div>
                                     <div class="col-6 mb-3">
                                         <h6>Phone</h6>
-                                        <p class="text-muted">{{user.profil.tel}}</p>
+                                        <p class="text-muted" *ngIf="!modify">{{user.profil.tel}}</p>
+                                        <input type="text" *ngIf="modify" class="form-control"
+                                            [(ngModel)]="user.profil.tel" placeholder="Téléphone">
                                     </div>
                                 </div>
                                 <div class="row pt-1">
                                     <div class="col-6 mb-3">
                                         <h6>Statut</h6>
                                         <p class="text-muted">{{user.profil.statut}}</p>
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <h6>Modification du profil</h6>
+                                        <button type="button" *ngIf="!modify" class="btn btn-primary" (click)="modification()">
+                                            <i-bs name="sliders"></i-bs><strong>Modify</strong>
+                                        </button>
+                                        <button type="button" *ngIf="modify" class="btn btn-primary" (click)="save()">
+                                            <i-bs name="sliders"></i-bs><strong>save</strong>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
